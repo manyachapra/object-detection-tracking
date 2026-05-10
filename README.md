@@ -136,7 +136,7 @@ output/result.mp4
 
 ## Output Screenshot
 
-![Output](screenshots/output.png)
+![Output](screenshot/output.png)
 
 ---
 
