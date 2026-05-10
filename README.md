@@ -1,58 +1,154 @@
-# Object Detection and Tracking from Video
+#Title: Object Detection and Tracking from Video using YOLOv8 and DeepSORT
 
-## Description
-This project performs real-time object detection and tracking from video using YOLOv8 and DeepSORT.
-The system detects objects in each frame and assigns unique IDs to track them across the video.
+##1. Abstract
 
-## Technologies Used
-- Python
-- OpenCV
-- YOLOv8 (Ultralytics)
-- DeepSORT
-- NumPy
+Object detection and tracking is an important task in computer vision which is used in surveillance, autonomous driving, robotics, and video analysis.
+This project implements real-time object detection and tracking from video using YOLOv8 and DeepSORT algorithms.
+The system detects objects in each frame of a video and assigns unique IDs to track them across frames.
+The model used is a pretrained YOLOv8 model trained on the COCO dataset.
+The project demonstrates how deep learning and computer vision techniques can be used for real-time video processing.
 
-## Project Structure
+##2. Introduction
 
-object-detection-tracking
-│
-├── main.py
-├── requirements.txt
-├── README.md
-├── videos/input.mp4
-└── output/
+Computer vision is a field of artificial intelligence that enables computers to understand images and videos.
+Object detection identifies objects in an image, while object tracking follows the detected objects across frames in a video.
 
-## Installation
+Object detection and tracking have many applications:
 
-Install required libraries:
+Video surveillance
+Traffic monitoring
+Autonomous vehicles
+Security systems
+Human activity analysis
 
-pip install -r requirements.txt
+In this project, YOLOv8 is used for object detection and DeepSORT is used for object tracking.
 
-or
+##3. Objective
 
-pip install opencv-python
-pip install ultralytics
-pip install deep-sort-realtime
-pip install numpy
+The main objectives of this project are:
 
-## How to Run
+To detect objects in video using YOLOv8
+To track objects across frames using DeepSORT
+To assign unique ID to each object
+To display bounding boxes around objects
+To save output video with detection results
+To implement the project using Python and OpenCV
+4. Dataset Used
 
-1. Put video inside videos folder
-2. Name video as input.mp4
-3. Run command:
+This project uses the pretrained YOLOv8 model which is trained on the COCO (Common Objects in Context) dataset.
+
+The COCO dataset contains 80 object classes such as:
+
+Person
+Dog
+Cat
+Car
+Bottle
+Chair
+Cup
+Cow
+Bird
+Bicycle
+
+Since the model is already trained, no additional dataset training was required for this project.
+
+##5. Tools and Technologies Used
+
+The following tools and libraries were used:
+
+Python
+OpenCV
+YOLOv8 (Ultralytics)
+DeepSORT Tracker
+NumPy
+SciPy
+FilterPy
+VS Code
+##6. Methodology
+
+The project works in the following steps:
+
+Read video using OpenCV
+Pass each frame to YOLOv8 model
+Detect objects with bounding boxes
+Send detections to DeepSORT tracker
+Assign unique ID to each object
+Draw bounding box and ID on frame
+Show output on screen
+Save output video in output folder
+
+The model processes each frame and tracks objects continuously.
+
+##7. Implementation
+
+The implementation is done using Python.
+
+Main steps in code:
+
+Load YOLOv8 model
+Initialize DeepSORT tracker
+Read input video
+Detect objects
+Track objects
+Display ID and bounding box
+Save output video
+
+The project can be executed using command line:
 
 python main.py
 
-## Output
+Input video is placed in:
 
-The program will open a window showing:
-- Object detection
-- Object tracking
-- Unique ID for each object
+videos/input.mp4
 
-## Course
+Output video is saved in:
 
-Computer Vision BYOP Project
+output/result.mp4
+## Output Screenshot
 
-## Author
+![Output](screenshots/output.png)
+##8. Results
 
-MANYA CHAPRA
+The system successfully detects and tracks objects in video.
+
+Features achieved:
+
+Real-time object detection
+Object tracking with unique ID
+Bounding box display
+Output video saved
+Multiple objects tracked
+
+The system works correctly for different objects such as person, dog, bottle, car, etc.
+
+Accuracy depends on:
+
+video quality
+lighting
+model size
+confidence threshold
+##9. Advantages
+Works in real time
+Uses deep learning model
+Tracks multiple objects
+Easy to run
+Uses pretrained dataset
+##10. Limitations
+Slow on CPU
+Sometimes wrong prediction
+Accuracy depends on video quality
+Large model reduces speed
+##11. Applications
+CCTV monitoring
+Traffic analysis
+Face / person tracking
+Security systems
+Sports analysis
+Robotics
+Autonomous vehicles
+##12. Conclusion
+In this project, object detection and tracking from video was successfully implemented using YOLOv8 and DeepSORT.
+The system detects objects and tracks them with unique IDs.
+The project demonstrates the use of computer vision techniques for real-time video analysis.
+The pretrained COCO dataset was used for detection.
+The results show that the system works effectively for different objects.
